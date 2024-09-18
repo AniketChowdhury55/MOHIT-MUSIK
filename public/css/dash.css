@@ -1,0 +1,12 @@
+
+/* giving some default value */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+  body{
+    background-color: rgb(5, 5, 75);
+    width: 100%;
+  }

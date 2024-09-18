@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link rel="shortcut icon" href="/pic and vid/Musik.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/dash.css" />
+</head>
+<style>
+  /* giving some default value */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+
+  body {
+    background-color: rgb(5, 5, 75);
+    width: 100%;
+  }
+
+  body h1 {
+    padding: 2vw;
+    color: white;
+  }
+
+  body h2 {
+    padding: 2vw;
+    padding-bottom: 0vw;
+    color: white;
+  }
+
+  /* Form container */
+  form.form1 {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header styling */
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  /* Label styling */
+  .l1 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  /* Input styling */
+  .i1 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 16px;
+    color: #333;
+  }
+
+  /* Button styling */
+  .b1 {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* Button hover effect */
+  .b1:hover {
+    background-color: #0056b3;
+  }
+
+  /* Input focus effect */
+  .i1:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  .form11 {
+    height: 30vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Responsive layout */
+  @media (max-width: 480px) {
+    form.form1 {
+      width: 90%;
+    }
+  }
+
+  .form2 {
+    max-width: 80vw;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+
+  .l2 {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .i2,
+  .s2 {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .i2[type="file"] {
+    padding: 3px;
+  }
+
+  .b2 {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .b2:hover {
+    background-color: #45a049;
+  }
+
+  .i2:focus,
+  .s2:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
+    .form2 {
+      padding: 15px;
+    }
+
+    .b2 {
+      padding: 10px;
+    }
+  }
+
+  .con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80vw;
+  }
+
+  .container h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .form3 {
+    display: inline;
+  }
+
+  .b3 {
+    background-color: #ad1a00;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .b3:hover {
+    background-color: #ff2200;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2vw;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 1vw;
+    width: 14vw;
+  }
+
+  ul li p {
+    margin: 5px 0;
+  }
+
+  ul li img {
+    object-fit: cover;
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    height: 14vh;
+    width: 13vw;
+  }
+
+  ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+
+  ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .form5 {
+
+
+
+    max-width: 500px;
+
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  /* General form styles */
+  .form4 {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  /* Label styles */
+  .form4 label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Input fields */
+  .form4 input[type="file"],
+  .form4 input[type="url"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+  }
+
+  /* Input hover effect */
+  .form4 input[type="file"]:focus,
+  .form4 input[type="url"]:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  /* Button styles */
+  .b4 {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Button hover effect */
+  .b4:hover {
+    background-color: #218838;
+  }
+  /* Form container - centers the button */
+.f6 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Button styles for logout */
+.b6 {
+  background-color: #dc3545; /* Red color for warning */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.b6:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Button focus effect */
+.b6:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 480px) {
+  .b6 {
+    width: 100%; /* Full-width button on smaller screens */
+    padding: 14px;
+  }
+}
+
+
+  /* Responsive form for smaller screens */
+  @media (max-width: 480px) {
+    form {
+      padding: 15px;
+      width: 90%;
+    }
+
+    form button {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+
+    .b3 {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 2vw;
+      width: 75vw;
+    }
+
+    .edit-iframe {
+      margin: 20px 0;
+    }
+
+    .edit-iframe input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+    }
+
+    .edit-iframe button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .edit-iframe button:hover {
+      background-color: #45a049;
+    }
+
+  }
+</style>
+
+<body>
+  <div id="main">
+    <h1>Admin Dashboard</h1>
+    <form class="f6" action="/admin/logout" method="GET">
+      <button type="submit" class="b6">Logout</button>
+    </form>
+
+    <!-- Form to create a new container -->
+    <h2>Create a New Container</h2>
+    <div class="form11">
+      <form class="form1" action="/admin/container" method="POST">
+        <label class="l1" for="title">Container Title:</label>
+        <input class="i1" type="text" name="title" id="title" required>
+        <button class="b1" type="submit">Create Container</button>
+      </form>
+    </div>
+
+    <hr>
+
+    <h2>Create a New Card</h2>
+    <form class="form2" action="/admin/card" method="POST" enctype="multipart/form-data">
+      <label class="l2" for="title">Card Title:</label>
+      <input class="i2" type="text" name="title" required>
+
+      <label class="l2" for="youtubeLink">YouTube Link:</label>
+      <input class="i2" type="url" name="youtubeLink" required>
+
+      <label class="l2" for="paragraph">Paragraph:</label>
+      <input class="i2" type="text" name="paragraph" required>
+
+      <label class="l2" for="container">Select Container:</label>
+      <select class="s2" name="container" required>
+        <% containers.forEach(container=> { %>
+          <option value="<%= container._id %>">
+            <%= container.title %>
+          </option>
+          <% }); %>
+      </select>
+
+      <label class="l2" for="image">Card Image:</label>
+      <input class="i2" type="file" name="image" accept="image/*" required>
+
+      <button class="b2" type="submit">Create Card</button>
+    </form>
+    <hr>
+
+    <!-- List all containers and their cards -->
+    <h2>Existing Containers and Cards</h2>
+    <% containers.forEach(container=> { %>
+      <div class="con">
+        <div class="container">
+          <h3>Container: <%= container.title %>
+          </h3>
+          <form class="form3" action="/admin/container/delete/<%= container._id %>" method="POST"
+            onsubmit="return confirm('Are you sure you want to delete this container?');">
+            <button type="submit" class="b3">Delete</button>
+          </form>
+          <ul>
+            <% container.cards.forEach(card=> { %>
+              <li>
+                <p>Title: <%= card.title %>
+                </p>
+                <p><a href="<%= card.youtubeLink %>">YouTube Link</a></p>
+                <img src="<%= card.imageUrl %>" alt="<%= card.title %>" width="100">
+                <form class="form5" action="/admin/card/delete/<%= container._id %>/<%= card._id %>" method="POST"
+                  onsubmit="return confirm('Are you sure you want to delete this card?');">
+                  <button type="submit" class="b3">Delete Card</button>
+                </form>
+              </li>
+              <% }); %>
+          </ul>
+        </div>
+      </div>
+      <% }); %>
+        <!-- new swiper adder -->
+        <h2>Add a New Swiper Slide</h2>
+        <form class="form4" action="/admin/swiper/add" method="POST" enctype="multipart/form-data">
+          <label for="image">Upload Image:</label>
+          <input type="file" name="image" id="image" required>
+
+          <label for="anchorUrl">Anchor URL (where the image should link to):</label>
+          <input type="url" name="anchorUrl" id="anchorUrl" placeholder="https://example.com" required>
+
+          <button class="b4" type="submit">Add Swiper Slide</button>
+        </form>
+
+
+        <hr>
+
+        <h2>Existing Swiper Slides</h2>
+        <ul>
+          <% if (swiperSlides && swiperSlides.length> 0) { %>
+            <% swiperSlides.forEach(slide=> { %>
+              <li>
+                <img src="<%= slide.imageUrl %>" alt="Swiper Slide" width="200">
+                <form action="/admin/swiper/delete/<%= slide._id %>" method="POST"
+                  onsubmit="return confirm('Are you sure you want to delete this slide?');">
+                  <button class="b4" type="submit">Delete</button>
+                </form>
+              </li>
+              <% }); %>
+                <% } else { %>
+                  <p>No swiper slides added yet.</p>
+                  <% } %>
+        </ul>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector('#main'),
+      smooth: true
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</body>
+
+</html>

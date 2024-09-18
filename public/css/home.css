@@ -1,0 +1,1038 @@
+
+/* giving some default value */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+body{
+  background-color: rgb(5, 5, 75);
+  height: max-content;
+  width: 100%;
+}
+/* main starts here */
+.page-1 {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+  background-color: rgb(5, 5, 75);
+}
+
+.main {
+  background-color: rgb(5, 5, 75);
+  height: max-content;
+  width: 100%;
+  overflow:hidden;
+}
+
+/* main image background */
+.page-1 img {
+  height: 80vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* background for opacity */
+.background {
+  opacity: .4;
+}
+
+/* navbar start here */
+.navbar {
+  height: 15vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+}
+
+/* left sode of navbar */
+.l-side {
+  height: 15vh;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* right side of navbar */
+.r-side {
+  height: 15vh;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
+/* button styles */
+.r-side button {
+  background-color: white;
+  color: rgb(5, 5, 75);
+  padding: .5vw 1.5vw;
+  border: none;
+  border-radius: 50px;
+  font-size: .8vw;
+  cursor: pointer;
+}
+
+.r-side button:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .2s all ease-in-out;
+}
+
+/* image size of logo in navbar */
+.l-side img {
+  height: 13vh;
+  width: auto;
+  object-fit: contain;
+}
+
+/* text work starts here */
+.txt {
+  position: absolute;
+  color: white;
+  font-size: 4vw;
+  top: 33vh;
+  left: 12.5vw;
+  font-family: Ani;
+  font-weight: 200;
+}
+
+.txt-2 {
+  position: absolute;
+  color: white;
+  font-size: 1.2vw;
+  top: 45vh;
+  left: 13vw;
+}
+
+/* button of first page mid */
+#get-started {
+  position: absolute;
+  top: 53vh;
+  left: 13vw;
+  padding: 1vw 3vw;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  font-size: .8vw;
+}
+
+#get-started:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+
+/* page2 starts here */
+.page-2 {
+  background-color: rgb(5, 5, 75);
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+/* moving text in page2 */
+.moving-text {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.moving-text::-webkit-scrollbar {
+  display: none;
+}
+
+.con {
+  white-space: nowrap;
+  display: inline-block;
+  animation: move;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.moving-text h1 {
+  font-size: 6vw;
+  display: inline-block;
+  color: white;
+}
+
+.gola {
+  height: 2vw;
+  width: 2vw;
+  display: inline-block;
+  margin: 1vw 2vw;
+  background-color: #F68712;
+  border-radius: 50%;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/*page-3 starts here  */
+.page-3 {
+  background-color: rgb(0, 0, 34);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* page3 core past headline css starts here */
+.core {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.core p {
+  font-size: 3vw;
+  position: absolute;
+  left: 13vw;
+  font-family: Ani;
+  font-weight: 200;
+  bottom: 0;
+}
+
+/* the threee images of the page3  */
+.the-three-images {
+  height: 70vh;
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image1 {
+  height: 60vh;
+  width: 26vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image1 img {
+  height: 60vh;
+  width: 23vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.img-txt {
+  z-index: 9;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.445);
+  position: absolute;
+  bottom: 0;
+  height: 15vh;
+  width: 23vw;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 2vw 2vw;
+}
+
+.img-txt p {
+  font-weight: 200;
+}
+
+/* page4 starts here */
+.page-4 {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  position: relative;
+}
+/* left side starthere */
+.left {
+  height: 100vh;
+  width: 50vw;
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 7vw;
+}
+.left img{
+  height: 80vh;
+  width: 40vw;
+  object-fit: cover;
+  border-radius: 30px;
+}
+/* the rightside starts here */
+.right {
+  height: 100vh;
+  width: 40vw;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: white;
+  padding: 15vw 0vw;
+  padding-right: 13vw;
+}
+.r-txt-1{
+  font-size: 2vw;
+}
+.r-txt-2{
+  font-weight: 200;
+  font-size: 1vw;
+}
+.r-txt-3{
+  font-weight: 200;
+  font-size: 1vw;
+}
+.right button{
+  padding: 1vw 3vw;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: .8vw;
+}
+.right button:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+/* page5 starts here */
+.page-5{
+  height: 95vh;
+  width: 100vw;
+  background-color: rgb(5, 5, 75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.glimps{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3vw;
+  color: white;
+  font-size: 2vw;
+  font-weight: 200;
+}
+/* swiper js with his swiper and the code starts here */
+.swiper {
+  width: 90vw;
+  height: 80vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-button-next{
+  color: #F68712;
+}
+.swiper-button-prev{
+  color: #F68712;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #F68712;
+}
+/* page-6 starts here */
+.page-6{
+  height: 40vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.p-left{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+  padding: 15vh 13vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.reach{
+  width: 100%;
+  font-size: 1vw;
+}
+.this-form{
+  width: 100%;
+  font-weight: 200;
+  font-size: .9vw;
+}
+.p-right{
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+/* form css starts here */
+.first-1{display: flex;
+align-items: center;
+justify-content: center;
+right: 13vw;
+top: 6vw;
+position: absolute;
+gap: 1vw;
+}
+.first-1 input{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 5vh;
+  width: 14.5vw;
+  border-radius: 10px;
+  color: black;
+    padding: .5vw .5vw;
+  color: black;
+  font-size: .8vw;
+}
+.first-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 13vw;
+}
+.first-2 textarea{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 10vh;
+  width: 30vw;
+  border-radius: 10px;
+  color: black;
+  resize: none;
+  padding: .5vw .5vw;
+  color: black;
+  font-size: .8vw;
+}
+
+.p-right button{
+  padding: .5vw 1.5vw;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: .8vw;
+  position: absolute;
+  right: 13vw;
+  bottom: 3vh;
+}
+.p-right button:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+/* footer */
+footer{
+  height: 30vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  position: relative;
+}
+.blackbar{
+  height: 5vh;
+  width: 100vw;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
+/* responsive for phone */
+@media (max-width:480px) {
+  .navbar{
+    height: 8vh;
+  }
+  .l-side img{
+    height: 8vh;
+  }
+  .l-side{
+    height: 8vh;
+  }
+  .r-side{
+    height: 8vh;
+    width: max-content;
+    padding-right: 2vw;
+  }
+  .r-side button{
+    padding: 2vw 6vw;
+    font-size: 2.5vw;
+  }
+  .page-1 {
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+    background-color: rgb(5, 5, 75);
+}
+.background img {
+  height: 40vh;
+}
+.txt{
+  top: 17vh;
+  left: 23vw;
+  font-size: 5vw;
+}
+.txt-2{
+  top: 22vh;
+  left: 0vw;
+  font-size: 4vw;
+  text-align: center;
+}
+#get-started {
+  position: absolute;
+  top: 30vh;
+  left: 30vw;
+  padding: 4vw 11vw;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  font-size: 3vw;
+}
+.page-2{
+  height: 10vh;
+}
+.page-3{
+  height: max-content;
+  display: block;
+}
+
+.core{
+  height: 7vh;
+}
+.core p{
+  font-size: 6vw;
+}
+.the-three-images{
+  flex-wrap: wrap;
+  margin-top: 2.5vh;
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3vh;
+}
+.image1{
+  width: 80vw;
+  height: 40vh;
+  margin: 2vw 2vw;
+}
+.image1 img{
+  width: 80vw;
+  height: 40vh;
+}
+.img-txt{
+  width: 80vw;
+  font-size: 3.5vw;
+  padding: 3vw 3vw;
+}
+/* page4 starts here */
+.page-4 {
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; 
+}
+/* left side starthere */
+.left {
+  height: 40vh;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left img{
+  height: 40vh;
+  width: 80vw;
+  object-fit: cover;
+  border-radius: 30px;
+}
+/* the rightside starts here */
+.right {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: white;
+  padding: 5vw 5vw;
+  bottom: 2vh;
+}
+.r-txt-1{
+  font-size: 5vw;
+}
+.r-txt-2{
+  font-weight: 200;
+  font-size: 3vw;
+}
+.r-txt-3{
+  font-weight: 200;
+  font-size: 3vw;
+}
+.page-5{
+  height: 35vh;
+}
+.glimps{
+  font-size: 5vw;
+}
+.swiper {
+  width: 90vw;
+  height: 30vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 95%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.page-6{
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.p-left{
+  height: 20vh;
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding:0;
+  top: 0;
+  left: 0;
+  padding: 5vw 5vw;
+}
+.reach{
+  width: 100%;
+  font-size: 3vw;
+}
+.this-form{
+  width: 100%;
+  font-weight: 200;
+  font-size: 4vw;
+}
+.p-right{
+  height: 50vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0vw;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* form css starts here */
+.first-1
+{display: flex;
+align-items: center;
+justify-content: center;
+right: 0;
+top: 10vh;
+position: absolute;
+gap: 3vw;
+flex-wrap: wrap;
+}
+.first-1 input{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 5vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+    padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+.first-2{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0vw;
+}
+.first-2 textarea{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 15vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+  resize: none;
+  padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+
+.p-right button{
+  padding: 4vw 15vw;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 4vw;
+  position: absolute;
+  right: 28vw;
+  bottom: 0vh;
+}
+.p-right button:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+}
+
+/* for ipad */
+@media (max-width:1024px) {
+  .navbar{
+    height: 8vh;
+  }
+  .l-side img{
+    height: 8vh;
+  }
+  .l-side{
+    height: 8vh;
+  }
+  .r-side{
+    height: 8vh;
+    width: max-content;
+    padding-right: 2vw;
+  }
+  .r-side button {
+    padding: 2vw 6vw;
+    font-size: 2.5vw;
+}
+  .page-1 {
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+    background-color: rgb(5, 5, 75);
+}
+.background img {
+  height: 40vh;
+}
+.txt{
+  top: 17vh;
+  left: 23vw;
+  font-size: 5vw;
+}
+.txt-2{
+  top: 22vh;
+  left: 0vw;
+  font-size: 4vw;
+  text-align: center;
+}
+#get-started {
+  position: absolute;
+  top: 30vh;
+  left: 30vw;
+  padding: 4vw 11vw;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  font-size: 3vw;
+}
+.page-2{
+  height: 10vh;
+}
+.page-3{
+  height: max-content;
+  display: block;
+}
+
+.core{
+  height: 7vh;
+}
+.core p{
+  font-size: 6vw;
+}
+.the-three-images{
+  flex-wrap: wrap;
+  margin-top: 2.5vh;
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3vh;
+}
+.image1{
+  width: 80vw;
+  height: 40vh;
+  margin: 2vw 2vw;
+}
+.image1 img{
+  width: 80vw;
+  height: 40vh;
+}
+.img-txt{
+  width: 80vw;
+  font-size: 2.5vw;
+  padding: 3vw 3vw;
+}
+/* page4 starts here */
+.page-4 {
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; 
+}
+/* left side starthere */
+.left {
+  height: 40vh;
+  width: 100vw;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left img{
+  height: 40vh;
+  width: 80vw;
+  object-fit: cover;
+  border-radius: 30px;
+}
+/* the rightside starts here */
+.right {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: white;
+  padding: 5vw 5vw;
+  bottom: 2vh;
+}
+.r-txt-1{
+  font-size: 3vw;
+}
+.r-txt-2{
+  font-weight: 200;
+  font-size: 2.5vw;
+}
+.r-txt-3{
+  font-weight: 200;
+  font-size: 2.5vw;
+}
+.page-5{
+  height: 45vh;
+}
+.glimps{
+  font-size: 5vw;
+}
+.swiper {
+  width: 90vw;
+  height: 30vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 95%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.page-6{
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.p-left{
+  height: 20vh;
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding:0;
+  top: 0;
+  left: 0;
+  padding: 5vw 5vw;
+}
+.reach{
+  width: 100%;
+  font-size: 3vw;
+}
+.this-form{
+  width: 100%;
+  font-weight: 200;
+  font-size: 4vw;
+}
+.p-right{
+  height: 50vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0vw;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* form css starts here */
+.first-1
+{display: flex;
+align-items: center;
+justify-content: center;
+right: 0;
+top: 10vh;
+position: absolute;
+gap: 3vw;
+flex-wrap: wrap;
+}
+.first-1 input{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 5vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+    padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+.first-2{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0vw;
+}
+.first-2 textarea{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 15vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+  resize: none;
+  padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+
+.p-right button{
+  padding: 2vw 15vw;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 4vw;
+  position: absolute;
+  right: 28vw;
+  bottom: 0vh;
+}
+.p-right button:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+}

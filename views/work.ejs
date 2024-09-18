@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MM Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/pic and vid/Musik.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/work.css" />
+</head>
+
+<body class="body">
+  <div class="main">
+    <div class="page-1">
+      <div class="background">
+        <img src="/pic and vid/DSC00063.JPG" alt="" sizes="(max-width: 600px) 400px, 
+       (max-width: 1200px) 800px, 
+       1200px" alt="Optimized image" />
+      </div>
+      <div class="navbar">
+        <div class="l-side">
+          <img src="/pic and vid/White and Pink Colorful Abstract Banner1.png" alt="" sizes="(max-width: 600px) 400px, 
+         (max-width: 1200px) 800px, 
+         1200px" alt="Optimized image" />
+        </div>
+        <div class="r-side">
+          <a href="/home"><button>Home</button></a>
+          <a href="/work"><button>Work</button></a>
+        </div>
+      </div>
+      <div class="txt">
+        <p>Welcome To Our Project Page</p>
+      </div>
+    </div>
+    <!-- <button id="get-started">Get Started</button> -->
+    <div class="our">
+      <div class="latest">
+        <h1>Our latest Projects</h1>
+      </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Loop through the swiper slides and wrap each image in an anchor tag -->
+          <% if (swiperSlides && swiperSlides.length > 0) { %>
+            <% swiperSlides.forEach(slide => { %>
+              <div class="swiper-slide">
+                <a href="<%= slide.anchorUrl %>" target="_blank">
+                  <img src="<%= slide.imageUrl %>" alt="Swiper Slide Image" class="simg">
+                </a>
+              </div>
+            <% }); %>
+          <% } else { %>
+            <p>No swiper slides available.</p>
+          <% } %>
+        </div>
+        <!-- Add navigation and pagination if necessary -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
+    <!-- new card testing -->
+
+
+    <div class="card-section1">
+      <% containers.forEach(container=> { %>
+        <div class="card-container1">
+          <div class="cc-h1">
+            <h1>
+              <%= container.title %>
+            </h1>
+          </div>
+          <div class="cards1 ">
+            <% container.cards.forEach(card=> { %>
+              <div class="card1">
+                <img src="<%= card.imageUrl %>" alt="<%= card.title %>">
+                <div class="txt567">
+                  <div class="txt5">
+                    <h3>
+                      <%= card.title %>
+                    </h3>
+                  </div>
+                  <div class="txt6">
+                    <p>
+                      <%= card.paragraph %>
+                    </p>
+                  </div>
+                  <div class="txt7">
+                    <a href="<%= card.linkUrl %>" target="_blank">Watch Video</a>
+                  </div>
+                </div>
+              </div>
+              <% }); %>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+  </div>
+  <div class="page-6">
+    <div class="p-left">
+      <div class="reach">
+        <h1>Reach Out Today</h1>
+      </div>
+      <div class="this-form">
+        <p>
+          Contact us through this form. We are help you with music needs and
+          questions
+        </p>
+      </div>
+    </div>
+    <div class="p-right">
+      <form action="">
+        <div class="first-1">
+          <input maxlength="100" required type="text" placeholder="Name">
+          <input maxlength="100" required type="text" placeholder="Email">
+        </div>
+        <div class="first-2">
+          <textarea required maxlength="1000" name="content" id=""></textarea>
+        </div>
+        <button>Send</button>
+      </form>
+
+    </div>
+  </div>
+  <footer>
+    <div class="blackbar"></div>
+  </footer>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="/js/work.js"></script>
+</body>
+
+</html>
