@@ -34,6 +34,10 @@
       secret: process.env.SECREAT,
       resave: false,
       saveUninitialized: false,
+      ssl: true, // Enable SSL
+      sslValidate: true, // Validate SSL certificates (set to false if using self-signed certs)
+      tlsAllowInvalidCertificates: false, // Set to true if self-signed certs are allowed
+      tlsInsecure: false, // Set to true if you don't want to validate SSL cert chain (not recommended)
       store: MongoStore.create({ mongoUrl })
     })
   );
