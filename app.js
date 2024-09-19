@@ -23,9 +23,9 @@
   
   // To parse JSON data
   app.use(express.json());
-  const mongoUri = process.env.MONGO_URI;
+  const mongoUrl = process.env.MONGO_URI;
   
-  mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
+  mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
   
