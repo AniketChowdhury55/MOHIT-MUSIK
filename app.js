@@ -16,6 +16,7 @@
   // Use the admin routes
   const adminRoutes = require('./routes/admin'); // Adjust the path if necessary
   app.use('/admin', adminRoutes);
+  const MongoStore = require('connect-mongo');
   // To parse form data (application/x-www-form-urlencoded)
   app.use(express.urlencoded({ extended: true }));
   
@@ -23,12 +24,21 @@
   app.use(express.json());
   
   // Session middleware for login
-app.use(session({
-  secret:  process.env.SECREAT, // Replace with a strong secret key
-  resave: false,
-  saveUninitialized: false,
-  cookie: { secure: false } // Set secure: true if using HTTPS
-}));
+  app.use(session({
+    secret:  process.env.SECREAT, // Replace with a strong secret key
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false } ,// Set secure: true if using HTTPS
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL })
+  }));
+  const mongoose = require('mongoose');
+  
+  mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 // Route to handle form submission
 app.post('/send-email', (req, res) => {
@@ -70,14 +80,6 @@ app.get("/home", async (req, res) => {
 
 // the new code starts here
 
-const mongoose = require('mongoose');
-
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log(err));
 
 const multer = require('multer');
 
