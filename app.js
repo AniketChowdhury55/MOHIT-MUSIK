@@ -17,28 +17,32 @@
   const adminRoutes = require('./routes/admin'); // Adjust the path if necessary
   app.use('/admin', adminRoutes);
   const MongoStore = require('connect-mongo');
+  const mongoose = require('mongoose');
   // To parse form data (application/x-www-form-urlencoded)
   app.use(express.urlencoded({ extended: true }));
   
   // To parse JSON data
   app.use(express.json());
-  
+
+  // Replace with your actual MongoDB connection string
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/your-database';
+mongoose.connect( mongoUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
   // Session middleware for login
   app.use(session({
     secret:  process.env.SECREAT, // Replace with a strong secret key
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false } ,// Set secure: true if using HTTPS
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL })
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URL,  // Provide your MongoDB connection string here
+      ttl: 14 * 24 * 60 * 60 // Optional: Set time to live for sessions
+    })
   }));
-  const mongoose = require('mongoose');
   
-  mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+
 
 // Route to handle form submission
 app.post('/send-email', (req, res) => {
