@@ -72,7 +72,7 @@ app.get("/home", async (req, res) => {
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/your-db-name', {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
