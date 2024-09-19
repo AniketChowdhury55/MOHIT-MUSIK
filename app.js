@@ -16,33 +16,29 @@
   // Use the admin routes
   const adminRoutes = require('./routes/admin'); // Adjust the path if necessary
   app.use('/admin', adminRoutes);
-  const MongoStore = require('connect-mongo');
   const mongoose = require('mongoose');
+  const MongoStore = require('connect-mongo');
   // To parse form data (application/x-www-form-urlencoded)
   app.use(express.urlencoded({ extended: true }));
   
   // To parse JSON data
   app.use(express.json());
-
-  // Replace with your actual MongoDB connection string
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017/your-database';
-mongoose.connect( mongoUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-  // Session middleware for login
-  app.use(session({
-    secret:  process.env.SECREAT, // Replace with a strong secret key
-    resave: false,
-    saveUninitialized: false,
-    cookie: { secure: false } ,// Set secure: true if using HTTPS
-    store: MongoStore.create({
-      mongoUrl: process.env.MONGO_URL,  // Provide your MongoDB connection string here
-      ttl: 14 * 24 * 60 * 60 // Optional: Set time to live for sessions
-    })
-  }));
+  const mongoUrl = process.env.MONGO_URI;
   
-
+  mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
+  
+  app.use(
+    session({
+      secret: process.env.SECREAT,
+      resave: false,
+      saveUninitialized: false,
+      store: MongoStore.create({ mongoUrl })
+    })
+  );
+  
+  // Your other middleware and routes
 
 // Route to handle form submission
 app.post('/send-email', (req, res) => {
