@@ -46,38 +46,38 @@
 
 // Route to handle form submission
 app.post('/send-email', (req, res) => {
-    const { name, email, message } = req.body
+  const { name, email, message } = req.body
+
+  // Set up the email transporter
+  let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.USER_FROM_EMAIL, // Your Gmail address
+      pass: process.env.NODE_MAILER , // Your Gmail password (or app password)
+    },
+  });
+
+ // Email options
+ let mailOptions = {
+  from: email,
+  to: process.env.USER_TO_EMAIL, // Your Gmail address
+  subject: 'New message from website contact form',
+  text: `You have a new message from ${name} (${email}):\n\n${message}`,
+};   
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.status(500).send('Error sending email');
+      } else {
+        console.log('Email sent: ' + info.response);
+        res.status(200).send('Email sent successfully');
+      }
+    });
+  });
+
   
-    // Set up the email transporter
-    let transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.USER_FROM_EMAIL, // Your Gmail address
-        pass: process.env.NODE_MAILER , // Your Gmail password (or app password)
-      },
-    });
-
-   // Email options
-   let mailOptions = {
-    from: email,
-    to: process.env.USER_TO_EMAIL, // Your Gmail address
-    subject: 'New message from website contact form',
-    text: `You have a new message from ${name} (${email}):\n\n${message}`,
-  };   
-
-    // Send the email
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.log(error);
-          res.status(500).send('Error sending email');
-        } else {
-          console.log('Email sent: ' + info.response);
-          res.status(200).send('Email sent successfully');
-        }
-      });
-    });
-
-
 app.get("/home", async (req, res) => {
    res.render("./home.ejs")
 })
@@ -151,6 +151,14 @@ app.get('/work', async (req, res) => {
     res.status(500).send('Server Error');
   }
 });
+
+app.get("/contact", async (req, res) => {
+  res.render("./contact.ejs")
+})
+app.get("/about", async (req, res) => {
+  res.render("./about.ejs")
+})
+
 
 // Catch-all route for non-existent pages (404)
 app.use((req, res, next) => {

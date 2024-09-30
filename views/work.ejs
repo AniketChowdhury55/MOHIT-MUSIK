@@ -25,13 +25,18 @@
       </div>
       <div class="navbar">
         <div class="l-side">
-          <img src="/pic and vid/White and Pink Colorful Abstract Banner1.png" alt="" sizes="(max-width: 600px) 400px, 
-         (max-width: 1200px) 800px, 
-         1200px" alt="Optimized image" />
+          <img
+            src="/pic and vid/MM Logo12.png"
+            alt=""  sizes="(max-width: 600px) 400px, 
+            (max-width: 1200px) 800px, 
+            1200px" 
+          />
         </div>
         <div class="r-side">
           <a href="/home"><button>Home</button></a>
           <a href="/work"><button>Work</button></a>
+          <a href="/about"><button>About Us</button></a>
+          <a href="/contact"><button>Contact Us</button></a>
         </div>
       </div>
       <div class="txt">
@@ -60,9 +65,6 @@
           <% } %>
         </div>
         <!-- Add navigation and pagination if necessary -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
       </div>
       
     <!-- new card testing -->
@@ -82,7 +84,7 @@
                 <img src="<%= card.imageUrl %>" alt="<%= card.title %>">
                 <div class="txt567">
                   <div class="txt5">
-                    <h3>
+                    <p>
                       <%= card.title %>
                     </h3>
                   </div>
@@ -104,6 +106,7 @@
   </div>
   <div class="page-6">
     <div class="p-left">
+      <div class="re">
       <div class="reach">
         <h1>Reach Out Today</h1>
       </div>
@@ -113,18 +116,27 @@
           questions
         </p>
       </div>
+      </div>
     </div>
     <div class="p-right">
-      <form action="">
-        <div class="first-1">
-          <input maxlength="100" required type="text" placeholder="Name">
-          <input maxlength="100" required type="text" placeholder="Email">
-        </div>
-        <div class="first-2">
-          <textarea required maxlength="1000" name="content" id=""></textarea>
-        </div>
-        <button>Send</button>
-      </form>
+      <div class="form-container">
+        <h1>Contact Us</h1>
+        <form action="/send-mail" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="text" id="mobile" name="mobile" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
 
     </div>
   </div>

@@ -1,0 +1,1166 @@
+
+  
+  /* giving some default value */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+  body{
+    background-color: rgb(5, 5, 75);
+  }
+  /* main starts here */
+  .main{
+    background-color: rgb(5, 5, 75);
+    width: 100%;
+    overflow:
+    hidden;
+  }
+  /* page1 starts here */
+  .page-1 {
+    height: 80vh;
+    width: 100vw;
+    position: relative;
+    background-color: rgb(5, 5, 75);
+  }
+  /* main starts here */
+
+/* main image background */
+.page-1 img {
+  height: 80vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* background for opacity */
+.background {
+  opacity: .4;
+}
+
+
+/* navbar start here */
+.navbar {
+  height: 15vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: white; */
+  top: 0;
+}
+
+/* left sode of navbar */
+.l-side {
+  height: 10vh;
+  width: 24%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* right side of navbar */
+.r-side {
+  height: 10vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  z-index: 9;
+}
+
+/* button styles */
+.r-side button {
+  background-color: white;
+  color: rgb(5, 5, 75);
+  height: 4vh;
+  width: 6vw;
+  /* padding: .5vw 1.5vw; */
+  border: none;
+  border-radius: 50px;
+  font-size: .8vw;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.r-side button:hover {
+  background-color: #CEAB5A;
+  color: white;
+  transition: .2s all ease-in-out;
+}
+
+/* image size of logo in navbar */
+.l-side img {
+  height: 7vh;
+  width: auto;
+  object-fit: contain;
+}
+
+/* text work starts here */
+.txt {
+  position: absolute;
+  color: white;
+  font-size: 6vw;
+  top: 0;
+  font-family: Ani;
+  font-weight: 500;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* button of first page mid */
+#get-started {
+  position: absolute;
+  top: 50vh;
+  left: 42.5vw;
+  padding: 1vw 3vw;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  font-size: .8vw;
+}
+
+#get-started:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+
+  /* page1 ends here */
+.back{
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+   gap: .5vw;
+   padding: 4vw 7vw;
+   color: white;
+   font-size: 1vw;
+}
+.back img{
+    height: 1.5vw;
+    width: 1.5vw;
+    cursor: pointer;
+}
+.back p{
+    cursor: pointer;
+}
+.back p:hover{
+    cursor: pointer;
+    color:  #F68712;
+    transition: 1s all ease-in-out;
+}
+.back a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+}
+/* cardssection  */
+.big-box{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-section{
+    height: 35vh;
+    width: 95nvw;
+    padding: 0vw 5vw;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(5, 5, 75);
+    overflow-y: scroll;
+}
+.card-section {
+  overflow: scroll; /* or auto */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.card-section::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.ful-card{
+  text-decoration: none;
+  height:27vh;
+  padding: .7vw;
+  width: 17vw;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 10px;
+  transition: transform .2s; /* Animation */
+  margin: 1vw .5vw;
+  color: black;
+}
+a{
+  text-decoration: none;
+}
+
+.ful-card:hover{
+  transform: scale(1.1);
+}
+.cards{
+    height: 16vh;
+    width: 17vw;
+    background-color: white;
+    border-radius: 10px;
+}
+.cards img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.cards p{
+    padding: 0vw 2vw;
+}
+/* page-6 starts here */
+.page-6{
+    height: 70vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 34);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .p-left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    padding: 15vh 13vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .reach{
+    width: 100%;
+    font-size: 1vw;
+  }
+  .this-form{
+    width: 100%;
+    font-weight: 200;
+    font-size: .9vw;
+  }
+  .p-right{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+
+  /* footer */
+  footer{
+    height: 30vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 34);
+    position: relative;
+  }
+  .blackbar{
+    height: 5vh;
+    width: 100vw;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+  }
+  .swiper {
+    width: 90vw;
+    height: 90vh;
+    position: relative;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #00000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+  }
+
+  .simg{
+    display: block;
+    width: 85vw;
+    height: 90vh;
+    object-fit: cover;
+    border-radius: 1vw;
+  }
+.latest{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 2vw 2vw;
+  color: white;
+}
+.our{
+  background-color: rgb(0, 0, 34);
+  padding-bottom: 3vw;
+}
+#top{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw 0vw;
+  background-color: rgb(5, 5, 75);
+}
+.swiper-button-next{
+  color: #F68712;
+}
+.swiper-button-prev{
+  color: #F68712;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #F68712;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #000; /* Change button color if needed */
+}
+
+.card-section1{
+  height: max-content;
+  width: 100vw;
+  padding-top: 5vw;
+}
+.card-cointainer1{
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto; /* Enables horizontal scrolling */ /* Prevents items from wrapping to the next line */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+.card-cointainer1::-webkit-scrollbar {
+  display: none;/* Height of the scrollbar */
+}
+
+.cc-h1{
+  color: white;
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 6vw;
+}
+.cards1 {
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  /* overflow-x: auto; 
+  scroll-behavior: smooth;  */
+}
+
+.card1 {
+    height: 29vh;
+    width: 17vw;
+    background-color: white;
+    border-radius: 0.521vw;
+    transition: transform .2s; /* Animation */
+}
+.card1:hover{
+  transform: scale(1.1);
+}
+.card1 img{
+  height: 19vh;
+  width: 17vw;
+  border-radius: 1.2vw;
+  padding: 0.7vw;
+  object-fit: cover;
+}
+.txt567{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  font-size: 0.8vw;
+}
+.txt5{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+.txt6{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+.txt7{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+  padding-bottom: 0.7vw;
+}
+.txt7 a{
+  color: red;
+}
+
+/* responsive for phone */
+@media (max-width:480px) {
+  .navbar{
+    height: 8vh;
+  }
+  .l-side img{
+    height: 8vh;
+  }
+  .l-side{
+    height: 8vh;
+  }
+  .r-side{
+    height: 8vh;
+    width: max-content;
+    padding-right: 2vw;
+  }
+  .r-side button{
+    padding: 2vw 6vw;
+    font-size: 2.5vw;
+  }
+  .page-1 {
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+    background-color: rgb(5, 5, 75);
+}
+.background img {
+  height: 40vh;
+
+}
+.txt{
+  position: absolute;
+  color: white;
+  font-size: 4vw;
+  top: 20vh;
+  left: 14.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Ani;
+  font-weight: 200;
+  font-size: 6vw;
+}
+.swiper {
+  width: 95vw;
+  height: 30vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.swiper-slide a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide iframe{
+height: 100%;
+width: 95vw;
+border-radius: 10px;
+}
+
+.latest{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 2vw 0vw;
+color: white;
+}
+.our{
+background-color: rgb(0, 0, 34);
+padding-bottom: 3vw;
+padding: 6vw 0vw;
+}
+.card-section {
+  height: 30vh;
+  width: 100vw;
+  padding: 0vw 5vw;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(5, 5, 75);
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  
+}
+.ful-card {
+  height: 25vh;
+  padding: 0.5vw;
+  width: 53vw;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 10px;
+  transition: transform .2s;
+  margin: 1vw 3vw;
+}
+
+
+.cards{
+  height: max-content;
+  width: 85vw;
+  background-color: white;
+  border-radius: 10px;
+  margin: 4vw 2vw;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards iframe{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cards p{
+  padding: 3vw 3vw;
+}
+.page-6{
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.p-left{
+  height: 20vh;
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding:0;
+  top: 0;
+  left: 0;
+  padding: 5vw 5vw;
+}
+.reach{
+  width: 100%;
+  font-size: 3vw;
+}
+.this-form{
+  width: 100%;
+  font-weight: 200;
+  font-size: 4vw;
+}
+.p-right{
+  height: 50vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0vw;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* form css starts here */
+.first-1
+{display: flex;
+align-items: center;
+justify-content: center;
+right: 0;
+top: 10vh;
+position: absolute;
+gap: 3vw;
+flex-wrap: wrap;
+}
+.first-1 input{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 5vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+    padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+.first-2{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0vw;
+}
+.first-2 textarea{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 15vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+  resize: none;
+  padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+
+.p-right button{
+  padding: 4vw 15vw;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 4vw;
+  position: absolute;
+  right: 28vw;
+  bottom: 0vh;
+}
+.p-right button:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+
+
+#top{
+  font-size: 3vw;
+}
+.card-section1{
+  height: max-content;
+  width: 100vw;
+  padding-top: 0vw;
+}
+.card-cointainer1{
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto; /* Enables horizontal scrolling */ /* Prevents items from wrapping to the next line */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+.card-cointainer1::-webkit-scrollbar {
+  display: none;/* Height of the scrollbar */
+}
+
+.cc-h1{
+  color: white;
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.7vw;
+}
+.cards1 {
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  overflow-x: scroll; 
+  scroll-behavior: smooth; 
+}
+
+.card1 {
+    height: 25vh;
+    width: 53vw;
+    background-color: white;
+    border-radius: 0.521vw;
+    transition: transform .2s; /* Animation */
+}
+.card1:hover{
+  transform: scale(1.1);
+}
+.card1 img{
+  height: 19vh;
+  width: 17vw;
+  border-radius: 1.2vw;
+  padding: 0.7vw;
+  object-fit: cover;
+}
+.txt567{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.txt5{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+.txt6{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+.txt7{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+  padding-bottom: 0.7vw;
+}
+
+}
+/* responsive for phone */
+@media (max-width:1023px) {
+  .navbar{
+    height: 8vh;
+  }
+  .l-side img{
+    height: 8vh;
+  }
+  .l-side{
+    height: 8vh;
+  }
+  .r-side{
+    height: 8vh;
+    width: max-content;
+    padding-right: 2vw;
+  }
+  .r-side button{
+    padding: 2vw 6vw;
+    font-size: 2.5vw;
+  }
+  .page-1 {
+    height: 40vh;
+    width: 100vw;
+    position: relative;
+    background-color: rgb(5, 5, 75);
+}
+.background img {
+  height: 40vh;
+
+}
+.txt{
+  position: absolute;
+  color: white;
+  font-size: 4vw;
+  top: 20vh;
+  left: 14.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Ani;
+  font-weight: 200;
+  font-size: 6vw;
+}
+.swiper {
+  width: 95vw;
+  height: 45vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.swiper-slide a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide iframe{
+height: 100%;
+width: 95vw;
+border-radius: 10px;
+}
+
+.latest{
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 2vw 0vw;
+color: white;
+}
+.our{
+background-color: rgb(0, 0, 34);
+padding-bottom: 3vw;
+padding: 6vw 0vw;
+}
+.card-section {
+  height: 30vh;
+  width: 100vw;
+  padding: 0vw 5vw;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(5, 5, 75);
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+}
+.ful-card {
+  height: 25vh;
+  padding: 0.5vw;
+  width: 53vw;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 10px;
+  transition: transform .2s;
+  margin: 1vw 3vw;
+}
+
+
+.cards{
+  height: max-content;
+  width: 85vw;
+  background-color: white;
+  border-radius: 10px;
+  margin: 4vw 2vw;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.cards iframe{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.cards p{
+  padding: 3vw 3vw;
+}
+.page-6{
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+.p-left{
+  height: 20vh;
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding:0;
+  top: 0;
+  left: 0;
+  padding: 5vw 5vw;
+}
+.reach{
+  width: 100%;
+  font-size: 3vw;
+}
+.this-form{
+  width: 100%;
+  font-weight: 200;
+  font-size: 4vw;
+}
+.p-right{
+  height: 50vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0vw;
+  top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* form css starts here */
+.first-1
+{display: flex;
+align-items: center;
+justify-content: center;
+right: 0;
+top: 10vh;
+position: absolute;
+gap: 3vw;
+flex-wrap: wrap;
+}
+.first-1 input{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 5vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+    padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+.first-2{
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0vw;
+}
+.first-2 textarea{
+  background-color: white;
+  outline: none;
+  border: none;
+  height: 15vh;
+  width: 80vw;
+  border-radius: 5px;
+  color: black;
+  resize: none;
+  padding: 1vw 1vw;
+  color: black;
+  font-size: 3vw;
+}
+
+.p-right button{
+  padding: 4vw 15vw;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 4vw;
+  position: absolute;
+  right: 28vw;
+  bottom: 0vh;
+}
+.p-right button:hover {
+  background-color: #F68712;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+
+
+#top{
+  font-size: 3vw;
+}
+.card-section1{
+  height: max-content;
+  width: 100vw;
+}
+.card-cointainer1{
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: auto; /* Enables horizontal scrolling */ /* Prevents items from wrapping to the next line */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+.card-cointainer1::-webkit-scrollbar {
+  display: none;/* Height of the scrollbar */
+}
+
+.cc-h1{
+  color: white;
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.7vw;
+}
+.cards1 {
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  overflow-x: scroll; 
+  scroll-behavior: smooth; 
+}
+
+.card1 {
+  height: 29vh;
+  width: 45vw;
+  background-color: white;
+  border-radius: 0.521vw;
+  transition: transform .2s;
+}
+.card1:hover{
+  transform: scale(1.1);
+}
+.card1 img {
+  height: 19vh;
+  width: 45vw;
+  border-radius: 1.2vw;
+  padding: 0.7vw;
+  object-fit: cover;
+}
+.txt567{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.txt5{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+.txt6{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+}
+.txt7{
+  width: 100%;
+  padding-left: 0.7vw;
+  padding-right: 0.7vw;
+  padding-bottom: 0.7vw;
+}
+
+}
+
+
+@media (max-width:480px) {
+  
+.cc-h1{
+  color: white;
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.7vw;
+}
+.cards1 {
+  height: 35vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5vw;
+  overflow-x: scroll; 
+  scroll-behavior: smooth; 
+  padding: 5vw;
+}
+.cards1::-webkit-scrollbar{
+  display: none;
+}
+
+.card1 {
+    height: 30vh;
+    width: 70vw;
+    background-color: white;
+    border-radius: 2.5vw;
+    transition: transform .2s; /* Animation */
+    font-size: 3vw;
+}
+.card1:hover{
+  transform: scale(1.1);
+}
+.card1 img{
+  height: 19vh;
+  width: 70vw;
+  border-radius: 3.5vw;
+  padding: 2vw;
+  object-fit: cover;
+}
+.txt567{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.txt5{
+  width: 100%;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+.txt6{
+  width: 100%;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+.txt7{
+  width: 100%;
+  padding-left: 2vw;
+  padding-right:2vw;
+  padding-bottom: 2vw;
+}
+}
+.form-container {
+    width: 40vw;
+    margin: 100px auto;
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-;
+}
+form button {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 1vw;
+}
+form button:hover {
+    background-color: #218838;
+}
+.page-6 {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  align-items: center;
+  position: relative;
+}

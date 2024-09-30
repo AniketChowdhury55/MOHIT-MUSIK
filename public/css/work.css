@@ -38,6 +38,7 @@
   opacity: .4;
 }
 
+
 /* navbar start here */
 .navbar {
   height: 15vh;
@@ -46,13 +47,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* background-color: white; */
   top: 0;
 }
 
 /* left sode of navbar */
 .l-side {
-  height: 15vh;
-  width: 30%;
+  height: 10vh;
+  width: 24%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,34 +62,38 @@
 
 /* right side of navbar */
 .r-side {
-  height: 15vh;
-  width: 30%;
+  height: 10vh;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2vw;
+    gap: 2vw;
+    z-index: 9;
 }
 
 /* button styles */
 .r-side button {
   background-color: white;
   color: rgb(5, 5, 75);
-  padding: .5vw 1.5vw;
+  height: 4vh;
+  width: 6vw;
+  /* padding: .5vw 1.5vw; */
   border: none;
   border-radius: 50px;
   font-size: .8vw;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .r-side button:hover {
-  background-color: #F68712;
+  background-color: #CEAB5A;
   color: white;
   transition: .2s all ease-in-out;
 }
 
 /* image size of logo in navbar */
 .l-side img {
-  height: 13vh;
+  height: 7vh;
   width: auto;
   object-fit: contain;
 }
@@ -96,12 +102,17 @@
 .txt {
   position: absolute;
   color: white;
-  font-size: 4vw;
-  top: 33vh;
-  left: 25vw;
+  font-size: 6vw;
+  top: 0;
   font-family: Ani;
-  font-weight: 200;
+  font-weight: 500;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* button of first page mid */
 #get-started {
@@ -219,104 +230,47 @@ a{
 }
 /* page-6 starts here */
 .page-6{
-    height: 40vh;
-    width: 100vw;
-    background-color: rgb(0, 0, 34);
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  .p-left{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color: white;
-    padding: 15vh 13vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .reach{
-    width: 100%;
-    font-size: 1vw;
-  }
-  .this-form{
-    width: 100%;
-    font-weight: 200;
-    font-size: .9vw;
-  }
-  .p-right{
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-  }
-/* form css starts here */
-.first-1{display: flex;
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.p-left{
+  height: 100%;
+  width: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  right: 13vw;
-  top: 6vw;
+  flex-wrap: wrap;
+  color: white;
+  padding: 15vh 13vw;
   position: absolute;
-  gap: 1vw;
-  }
-  .first-1 input{
-    background-color: white;
-    outline: none;
-    border: none;
-    height: 5vh;
-    width: 14.5vw;
-    border-radius: 10px;
-    color: black;
-      padding: .5vw .5vw;
-    color: black;
-    font-size: .8vw;
-  }
-  .first-2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 13vw;
-  }
-  .first-2 textarea{
-    background-color: white;
-    outline: none;
-    border: none;
-    height: 10vh;
-    width: 30vw;
-    border-radius: 10px;
-    color: black;
-    resize: none;
-    padding: .5vw .5vw;
-    color: black;
-    font-size: .8vw;
-  }
-  
-  .p-right button{
-    padding: .5vw 1.5vw;
-    background-color: rgb(0, 102, 255);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: .8vw;
-    position: absolute;
-    right: 13vw;
-    bottom: 3vh;
-  }
-  .p-right button:hover {
-    background-color: #F68712;
-    color: white;
-    transition: .5s all ease-in-out;
-  }
+  top: 0;
+  left: 0;
+}
+.reach{
+  width: 100%;
+  font-size: 1vw;
+}
+.this-form{
+  width: 100%;
+  font-weight: 200;
+  font-size: .9vw;
+}
+.p-right{
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+}
+
   /* footer */
   footer{
     height: 30vh;
@@ -357,8 +311,8 @@ a{
 .latest{
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2vw 0vw;
+  justify-content: start;
+  padding: 2vw 2vw;
   color: white;
 }
 .our{
@@ -393,6 +347,7 @@ a{
 .card-section1{
   height: max-content;
   width: 100vw;
+  padding-top: 5vw;
 }
 .card-cointainer1{
   height: 35vh;
@@ -413,8 +368,8 @@ a{
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-left: 0.7vw;
+  justify-content: start;
+  padding-left: 6vw;
 }
 .cards1 {
   height: 35vh;
@@ -450,6 +405,7 @@ a{
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  font-size: 0.8vw;
 }
 .txt5{
   width: 100%;
@@ -466,6 +422,9 @@ a{
   padding-left: 0.7vw;
   padding-right: 0.7vw;
   padding-bottom: 0.7vw;
+}
+.txt7 a{
+  color: red;
 }
 
 /* responsive for phone */
@@ -559,6 +518,7 @@ padding: 6vw 0vw;
   overflow-y: scroll;
   display: flex;
   align-items: center;
+  
 }
 .ful-card {
   height: 25vh;
@@ -699,6 +659,7 @@ flex-wrap: wrap;
 .card-section1{
   height: max-content;
   width: 100vw;
+  padding-top: 0vw;
 }
 .card-cointainer1{
   height: 35vh;
@@ -776,7 +737,7 @@ flex-wrap: wrap;
 
 }
 /* responsive for phone */
-@media (max-width:1024px) {
+@media (max-width:1023px) {
   .navbar{
     height: 8vh;
   }
@@ -1151,4 +1112,55 @@ flex-wrap: wrap;
   padding-right:2vw;
   padding-bottom: 2vw;
 }
+}
+.form-container {
+  width: 40vw;
+  margin: 100px auto;
+  background-color: transparent;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-;
+}
+form button {
+width: 100%;
+background-color: #28a745;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+padding: 1vw;
+}
+form button:hover {
+  background-color: #218838;
+}
+.page-6 {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 34);
+  display: flex;
+  align-items: center;
+  position: relative;
 }
