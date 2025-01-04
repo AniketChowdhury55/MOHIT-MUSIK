@@ -9,7 +9,7 @@ const Config = require('../models/Config');
 const Iframe = require('../models/Iframe');
 const session = require('express-session');
 const SwiperSlide = require('../models/SwiperSlide');
-const Admin = require('../models/Admin'); // Admin model to handle password
+const Admin = require('../models/admin'); // Admin model to handle password
 const multer = require('multer');
 const path = require('path');
 
