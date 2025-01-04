@@ -1,23 +1,8 @@
-// const mongoose = require('mongoose');
-// const bcrypt = require('bcryptjs');
+const mongoose = require('mongoose');
 
-// const adminSchema = new mongoose.Schema({
-//   username: { type: String, required: true, unique: true },
-//   password: { type: String, required: true },
-// });
+const AdminSchema = new mongoose.Schema({
+  username: { type: String, required: true, unique: true },
+  password: { type: String, required: true }, // Store hashed passwords
+});
 
-// // Password hashing before saving the admin
-// adminSchema.pre('save', async function (next) {
-//   if (this.isModified('password')) {
-//     this.password = await bcrypt.hash(this.password, 12);
-//   }
-//   next();
-// });
-
-// // Method to check the password
-// adminSchema.methods.comparePassword = function (password) {
-//   return bcrypt.compare(password, this.password);
-// };
-
-// module.exports = mongoose.model('Admin', adminSchema);
-
+module.exports = mongoose.model('Admin', AdminSchema);

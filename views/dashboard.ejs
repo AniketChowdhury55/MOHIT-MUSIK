@@ -9,7 +9,7 @@
   <link rel="shortcut icon" href="/pic and vid/Musik.png" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/dash.css" />
 </head>
 <style>
@@ -416,6 +416,37 @@
     }
 
   }
+  .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0BC8CC;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #089b9e;
+        }
+        .message {
+            margin: 10px 0;
+            color: red;
+        }
 </style>
 
 <body>
@@ -424,7 +455,25 @@
     <form class="f6" action="/admin/logout" method="GET">
       <button type="submit" class="b6">Logout</button>
     </form>
-
+    <div class="container">
+      <h1>Change Password</h1>
+      <form action="/admin/change-password" method="POST">
+          <div class="form-group">
+              <label for="currentPassword">Current Password</label>
+              <input type="password" id="currentPassword" name="currentPassword" required>
+          </div>
+          <div class="form-group">
+              <label for="newPassword">New Password</label>
+              <input type="password" id="newPassword" name="newPassword" required>
+          </div>
+          <div class="form-group">
+              <label for="confirmPassword">Confirm New Password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Change Password</button>
+      </form>
+  </div>
+    
     <!-- Form to create a new container -->
     <h2>Create a New Container</h2>
     <div class="form11">

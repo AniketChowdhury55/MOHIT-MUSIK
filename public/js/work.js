@@ -2,7 +2,19 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('.body'),
     smooth: true
 });
+const hamburger = document.getElementById('hamburger');
+const popup = document.getElementById('popup');
+const popupOverlay = document.getElementById('popup-overlay');
 
+hamburger.addEventListener('click', () => {
+  popup.classList.add('show');
+  popupOverlay.classList.add('show');
+});
+
+popupOverlay.addEventListener('click', () => {
+  popup.classList.remove('show');
+  popupOverlay.classList.remove('show');
+});
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,

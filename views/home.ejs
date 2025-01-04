@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="shortcut icon" href="/pic and vid/Musik.png" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/home.css" />
 </head>
 
@@ -19,33 +19,45 @@
     <!-- page1 -->
     <div class="page-1">
       <div class="background">
-        <img src="/pic and vid/DSC00062.JPG" alt="" sizes="(max-width: 600px) 400px, 
-            (max-width: 1200px) 800px, 
-            1200px" />
+        <video src="/pic and vid/NEXT.mp4" autoplay loop muted playsinline>
+          Your browser does not support the video tag.
+        </video>
       </div>
+      
       <div class="navbar">
         <div class="l-side">
-          <img src="/pic and vid/MM Logo12.png" alt="" sizes="(max-width: 600px) 400px, 
-              (max-width: 1200px) 800px, 
-              1200px" />
+          <img src="/pic and vid/MM Logo12.png" alt="Logo" sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" />
         </div>
         <div class="r-side">
           <a href="/home"><button>Home</button></a>
           <a href="/work"><button>Work</button></a>
-          <a href="/about"><button>About Us</button></a>
+          <!-- <a href="/about"><button>About Us</button></a> -->
           <a href="/contact"><button>Contact Us</button></a>
         </div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
-      <div class="txt">
+    
+      <div class="popup-overlay" id="popup-overlay"></div>
+      <div class="popup" id="popup">
+        <a href="/home">Home</a>
+        <a href="/work">Work</a>
+        <!-- <a href="/about">About Us</a> -->
+        <a href="/contact">Contact Us</a>
+      </div>
+      <!-- <div class="txt-1">
         <p>Create Your Musical Journey</p>
       </div>
       <div class="txt-2">
         <p>
           Discover how our studio helps bring your music to life. Learn,
-          record, <br />
+          record,
           and grow with us in Mumbai.
         </p>
-      </div>
+      </div> -->
       <!-- <button id="get-started">Get Started</button> -->
     </div>
     <!-- page2 -->
@@ -77,6 +89,44 @@
         </div>
       </div>
     </div>
+        <!-- page-4 -->
+        <div class="page-4">
+          <div class="left">
+            <img src="/pic and vid/DSC00065.JPG" alt="" sizes="(max-width: 600px) 400px, 
+                (max-width: 1200px) 800px, 
+                1200px" />
+          </div>
+          <div class="right">
+            <div class="r-txt-1">
+              <h1>About Us</h1>
+            </div>
+            <div class="r-txt-2">
+              <p>
+                Welcome to Mohit Music, your premier destination for professional music production in the heart of Mumbai.
+                We specialize in providing world-class music mastering and mixing as well as song recording services,
+                tailored to elevate your creative vision.
+              </p>
+            </div>
+            <div class="r-txt-3">
+              <p>
+                At Mohit Music, we understand the art of sound and the passion that drives every artist. Our
+                state-of-the-art studio is equipped with cutting-edge technology and a team of skilled professionals
+                dedicated to ensuring your music reaches its fullest potential. Whether you're a solo artist, a band, or a
+                producer, we offer a collaborative environment that inspires creativity and delivers exceptional results.
+              </p>
+            </div>
+            <div class="r-txt-3">
+              <p>
+                From the first note to the final mix, we pride ourselves on delivering a seamless experience that meets industry standards. At Mohit Music, your music is our masterpiece.
+              </p>
+            </div>
+            <div class="r-txt-3">
+              <p>
+                Let’s create something extraordinary together.
+              </p>
+            </div>
+          </div>
+        </div>
     <!-- page-3 -->
     <div class="page-3">
       <div class="core">
@@ -120,33 +170,6 @@
         </div>
       </div>
     </div>
-    <!-- page-4 -->
-    <div class="page-4">
-      <div class="left">
-        <img src="/pic and vid/DSC00065.JPG" alt="" sizes="(max-width: 600px) 400px, 
-            (max-width: 1200px) 800px, 
-            1200px" />
-      </div>
-      <div class="right">
-        <div class="r-txt-1">
-          <h1>About Us</h1>
-        </div>
-        <div class="r-txt-2">
-          <p>
-            At our music studio in Mumbai, we believe in the power of
-            creativity. We started with a simple idea: to give everyone a
-            chance to express themselves through music.
-          </p>
-        </div>
-        <div class="r-txt-3">
-          <p>
-            Our team is made up of passionate individuals who love to teach
-            and inspire. Wheather you are a beginner or a seasoned musician,
-            we are here to help you achive your musical dreams.
-          </p>
-        </div>
-      </div>
-    </div>
     <!-- page10 -->
     <div class="page-10">
       <div class="client-wrap">
@@ -178,162 +201,13 @@
               <img src="/pic and vid/11.png" alt="">
               <img src="/pic and vid/10.png" alt="">
             </li>
-            <li>
-              <img src="/pic and vid/1.png" alt="">
-              <img src="/pic and vid/12.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/3.png" alt="">
-              <img src="/pic and vid/2.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/file.png" alt="">
-              <img src="/pic and vid/4.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/file (1).png" alt="">
-              <img src="/pic and vid/6.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/9.png" alt="">
-              <img src="/pic and vid/8.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/11.png" alt="">
-              <img src="/pic and vid/10.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/1.png" alt="">
-              <img src="/pic and vid/12.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/3.png" alt="">
-              <img src="/pic and vid/2.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/file.png" alt="">
-              <img src="/pic and vid/4.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/file (1).png" alt="">
-              <img src="/pic and vid/6.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/9.png" alt="">
-              <img src="/pic and vid/8.png" alt="">
-            </li>
-            <li>
-              <img src="/pic and vid/11.png" alt="">
-              <img src="/pic and vid/10.png" alt="">
-            </li>
+            
           </ul>
         </div>
       </div>
     </div>
     <!-- page11 -->
-    <div class="page-11">
-      <div id="page" class="site">
-        <div class="container">
-          <div class="testi">
-            <div class="head">
-              <h3>Testimonials</h3>
-              <p>See what people are saying..</p>
-            </div>
-            <div class="bodies swiper">
-              <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                  <div class="wrapper">
-                    <div class="thumbnail">
-                      <img src="/pic and vid/ashton-bingham-EQFtEzJGERg-unsplash.jpg" alt="">
-                    </div>
-                    <div class="aside">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus officiis ex a harum explicabo
-                        molestiae iste pariatur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-                        officiis ex a harum explicabo molestiae iste pariatur.</p>
-                      <div class="name">
-                        <h4>BMW</h4>
-                        <p>Automobile Company</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="swiper-slide">
-                  <div class="wrapper">
-                    <div class="thumbnail">
-                      <img src="/pic and vid/aiony-haust-3TLl_97HNJo-unsplash.jpg" alt="">
-                    </div>
-                    <div class="aside">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus officiis ex a harum explicabo
-                        molestiae iste pariatur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-                        officiis ex a harum explicabo molestiae iste pariatur.</p>
-                      <div class="name">
-                        <h4>BMW</h4>
-                        <p>Automobile Company</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="swiper-slide">
-                  <div class="wrapper">
-                    <div class="thumbnail">
-                      <img src="/pic and vid/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="">
-                    </div>
-                    <div class="aside">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus officiis ex a harum explicabo
-                        molestiae iste pariatur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-                        officiis ex a harum explicabo molestiae iste pariatur.</p>
-                      <div class="name">
-                        <h4>BMW</h4>
-                        <p>Automobile Company</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="swiper-slide">
-                  <div class="wrapper">
-                    <div class="thumbnail">
-                      <img src="/pic and vid/kirill-balobanov-2rIs8OH5ng0-unsplash.jpg" alt="">
-                    </div>
-                    <div class="aside">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus officiis ex a harum explicabo
-                        molestiae iste pariatur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-                        officiis ex a harum explicabo molestiae iste pariatur.</p>
-                      <div class="name">
-                        <h4>BMW</h4>
-                        <p>Automobile Company</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="swiper-slide">
-                  <div class="wrapper">
-                    <div class="thumbnail">
-                      <img src="/pic and vid/brooke-cagle-kvKSL7B6eTo-unsplash.jpg" alt="">
-                    </div>
-                    <div class="aside">
-                      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus officiis ex a harum explicabo
-                        molestiae iste pariatur.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-                        officiis ex a harum explicabo molestiae iste pariatur.</p>
-                      <div class="name">
-                        <h4>BMW</h4>
-                        <p>Automobile Company</p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="page-5">
+    <!-- <div class="page-5">
       <div class="glimps">
         <p>Glimps Of Our Work Space</p>
       </div>
@@ -357,7 +231,7 @@
           <img src="/pic and vid/DSC00066.JPG" alt="">
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="page-7">
       <div class="pg7txt">
         <p>Discover Our Social Journey</p>
@@ -373,7 +247,7 @@
             <div class="instabottom">
               <p>"Follow @mohitmusik and @mmstudiomohit on Instagram for exclusive music content and a glimpse into the
                 creative process at the studio. Stay tuned for updates and new releases!"</p>
-              <a href=""><button class="button">Follow Me</button>
+              <a href="https://www.instagram.com/mmstudiomohit?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><button class="button">Follow Me</button>
               </a>
             </div>
           </div>
@@ -392,16 +266,16 @@
               <p>
                 "Check out my YouTube channel for the latest music videos and studio sessions. Subscribe and hit the
                 bell icon to stay updated with all my new releases!"</p>
-              <a href=""><button class="button">Subscribe Me</button>
+              <a href="https://youtube.com/@musikmohit?si=wxZfvTRpX6_s1y-4"><button class="button">Subscribe Me</button>
               </a>
             </div>
           </div>
           <div class="instaright">
             <img src="/pic and vid/ss.png" alt="">
           </div>
-        </div>x
+        </div>
         <!-- facebook -->
-        <div class="insta">
+        <!-- <div class="insta">
           <div class="instaleft">
             <div class="instatop">
               <img src="/pic and vid/Facebook_Logo_2023.png" alt="">
@@ -417,7 +291,7 @@
           <div class="instaright">
             <img src="/pic and vid/u123.png" alt="">
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="page-6">

@@ -77,10 +77,7 @@ app.post('/send-email', (req, res) => {
     });
   });
 
-  
-app.get("/home", async (req, res) => {
-   res.render("./home.ejs")
-})
+
 
 // the new code starts here
 
@@ -132,7 +129,9 @@ let containers = [
     ]
   }
 ];
-
+app.get("/home", async (req, res) => {
+  res.render("./home.ejs")
+})
 app.get('/work', async (req, res) => {
   try {
     // Fetch all containers and their associated cards from the database
@@ -155,9 +154,9 @@ app.get('/work', async (req, res) => {
 app.get("/contact", async (req, res) => {
   res.render("./contact.ejs")
 })
-app.get("/about", async (req, res) => {
-  res.render("./about.ejs")
-})
+// app.get("/about", async (req, res) => {
+//   res.render("./about.ejs")
+// })
 
 
 // Catch-all route for non-existent pages (404)
