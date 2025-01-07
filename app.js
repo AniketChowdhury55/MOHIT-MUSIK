@@ -132,6 +132,11 @@ let containers = [
 app.get("/home", async (req, res) => {
   res.render("./home.ejs")
 })
+// Redirect root to home
+app.get('/', (req, res) => {
+  res.redirect('/home');
+});
+
 app.get('/work', async (req, res) => {
   try {
     // Fetch all containers and their associated cards from the database
